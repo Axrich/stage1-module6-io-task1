@@ -1,26 +1,12 @@
 package com.epam.mjc.io;
 
-import org.junit.jupiter.api.Test;
-
-import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-
-
-
 public class Profile {
-
     private String name;
-    private Integer age;
+    private int age;
     private String email;
-    private Long phone;
+    private long phone;
 
-    public Profile() {
-
-    }
-
-    public Profile(String name, Integer age, String email, Long phone) {
+    public Profile(String name, int age, String email, long phone) {
         this.name = name;
         this.age = age;
         this.email = email;
@@ -31,68 +17,25 @@ public class Profile {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
+    public int getAge() {
         return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Long getPhone() {
+    public long getPhone() {
         return phone;
-    }
-
-    public void setPhone(Long phone) {
-        this.phone = phone;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Profile{");
-        sb.append("name='").append(name).append('\'');
-        sb.append(", age=").append(age);
-        sb.append(", email='").append(email).append('\'');
-        sb.append(", phone=").append(phone);
-        sb.append('}');
-        return sb.toString();
+        return "Profile{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", phone=" + phone +
+                '}';
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Profile profile = (Profile) o;
-        return getName().equals(profile.getName())
-                && getAge().equals(profile.getAge())
-                && getEmail().equals(profile.getEmail())
-                && getPhone().equals(profile.getPhone());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getName(), getAge(), getEmail(), getPhone());
-    }
-
 }
-
-
-
-
-
