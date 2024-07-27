@@ -1,12 +1,7 @@
 package com.epam.mjc.io;
 
-import org.junit.jupiter.api.Test;
 
-import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
-
 
 
 public class Profile {
@@ -26,7 +21,7 @@ public class Profile {
         this.email = email;
         this.phone = phone;
     }
-
+//геттеры сеттеры
     public String getName() {
         return name;
     }
@@ -58,7 +53,7 @@ public class Profile {
     public void setPhone(Long phone) {
         this.phone = phone;
     }
-
+//закончились
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Profile{");
@@ -90,8 +85,5 @@ public class Profile {
         return Objects.hash(getName(), getAge(), getEmail(), getPhone());
     }
 
-}
-
-
-
+   }
 
