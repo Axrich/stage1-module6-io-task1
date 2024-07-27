@@ -1,6 +1,13 @@
 package com.epam.mjc.io;
 
+import org.junit.jupiter.api.Test;
+
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
+
+
 
 public class Profile {
 
@@ -12,6 +19,7 @@ public class Profile {
     public Profile() {
 
     }
+
     public Profile(String name, Integer age, String email, Long phone) {
         this.name = name;
         this.age = age;
@@ -81,4 +89,9 @@ public class Profile {
     public int hashCode() {
         return Objects.hash(getName(), getAge(), getEmail(), getPhone());
     }
+
 }
+
+
+
+
